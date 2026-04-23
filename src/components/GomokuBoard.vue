@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, reactive, computed, onMounted, onUnmounted } from "vue";
+import { ref, reactive, onUnmounted } from "vue";
 import { BOARD_SIZE, type Cell, type Player, checkWinner } from "../logic/gomoku";
 
 const board = reactive<Cell[][]>(
@@ -20,7 +20,6 @@ const errorMsg = ref("");
 
 // 判断是否是星位
 const isStarPoint = (r: number, c: number) => {
-  const stars = [3, 7, 11];
   if (r === 7 && c === 7) return true;
   return (r === 3 || r === 11) && (c === 3 || c === 11);
 };
