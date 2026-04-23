@@ -27,7 +27,7 @@ const isStarPoint = (r: number, c: number) => {
 const connectWS = () => {
   if (!roomIdInput.value) return;
   
-  socket.value = new WebSocket('ws://localhost:8080');
+  socket.value = new WebSocket('wss://wzqbe.0tz.cc.cd');
 
   socket.value.onopen = () => {
     socket.value?.send(JSON.stringify({
